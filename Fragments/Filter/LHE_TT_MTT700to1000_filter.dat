@@ -1,0 +1,10 @@
+LHE_TT_MTT700to1000_filter = cms.EDFilter("MCParticlePairFilter",
+                             Status = cms.untracked.vint32(22, 22),
+                             MinPt = cms.untracked.vdouble(0., 0.),
+                             ParticleCharge = cms.untracked.int32(0),
+                             ParticleID1 = cms.untracked.vint32(6),
+                             ParticleID2 = cms.untracked.vint32(6),
+                             MinInvMass = cms.untracked.double(700.),
+                             MaxInvMass = cms.untracked.double(1000.),
+)
+ProductionFilterSequence = cms.Sequence(generator*LHE_TT_MTT700to1000_filter)
